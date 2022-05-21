@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.kircherelectronics.com.gyroscopeexplorer"
+        minSdkVersion 14
+        targetSdkVersion 32
+        versionCode = 12
+        versionName = "1.5.5"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'org.apache.commons:commons-csv:1.4'
+    implementation 'com.github.KalebKE:FSensor:v2.1'
+}
